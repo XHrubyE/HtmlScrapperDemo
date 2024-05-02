@@ -1,7 +1,8 @@
 package fit.vutbr.HtmlScrapperDemo.oteDemo;
 
-import fit.vutbr.HtmlScrapper.anotations.CssSelect;
-import fit.vutbr.HtmlScrapper.anotations.XPathSelect;
+
+import fit.vutbr.HtmlScrapper.annotations.CssSelect;
+import fit.vutbr.HtmlScrapper.annotations.XPathSelect;
 
 @XPathSelect("(//tbody)[2]/tr[position() <= 24]")
 public class ValuesPerHour {

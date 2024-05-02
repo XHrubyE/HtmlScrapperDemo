@@ -1,8 +1,8 @@
 package fit.vutbr.HtmlScrapperDemo.movieDemo;
 
-import fit.vutbr.HtmlScrapper.anotations.CssSelect;
-import fit.vutbr.HtmlScrapper.anotations.ObjectSelect;
 
+import fit.vutbr.HtmlScrapper.annotations.CssSelect;
+import fit.vutbr.HtmlScrapper.annotations.ObjectSelect;
 
 @CssSelect(".sc-b0691f29-0.jbYPfh.cli-children")
 public class Movie {

@@ -1,6 +1,6 @@
 package fit.vutbr.HtmlScrapperDemo.movieDemo;
 
-import fit.vutbr.HtmlScrapper.anotations.XPathSelect;
+import fit.vutbr.HtmlScrapper.annotations.XPathSelect;
 
 public class MovieInfo {
     @XPathSelect("div[2]/span[1]")
