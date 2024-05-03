@@ -1,17 +1,15 @@
-package fit.vutbr.HtmlScrapperDemo.movieDemo;
+package fit.vutbr.HtmlScrapperDemo.oteDemo;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import fit.vutbr.HtmlScrapper.scrapper.ScrapperTemplate;
-import fit.vutbr.HtmlScrapperDemo.oteDemo.Ote;
 
-public class runMovieDemo {
+public class OteDemo {
     public static void main(String[] args) {
         ScrapperTemplate template = new ScrapperTemplate();
         try {
-            // Downloading this source document takes a bit of time cca 20-30 seconds
-            MovieList movies = template.scrapeData("https://www.imdb.com/chart/top/", MovieList.class);
+            Ote ote = template.scrapeData("https://www.ote-cr.cz/cs/kratkodobe-trhy/elektrina/denni-trh?date=2024-04-01", Ote.class);
             ObjectMapper objectMapper = new ObjectMapper();
-            String json = objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(movies);
+            String json = objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(ote);
             System.out.println(json);
         } catch (Exception e) {
             System.out.println(e.getMessage());

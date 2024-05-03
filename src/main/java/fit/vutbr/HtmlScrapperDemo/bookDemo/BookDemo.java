@@ -1,15 +1,15 @@
-package fit.vutbr.HtmlScrapperDemo.oteDemo;
+package fit.vutbr.HtmlScrapperDemo.bookDemo;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import fit.vutbr.HtmlScrapper.scrapper.ScrapperTemplate;
 
-public class runDemo {
+public class BookDemo {
     public static void main(String[] args) {
         ScrapperTemplate template = new ScrapperTemplate();
         try {
-            Ote ote = template.scrapeData("https://www.ote-cr.cz/cs/kratkodobe-trhy/elektrina/denni-trh?date=2024-03-27", Ote.class);
+            NewBookReleases newBookReleases = template.scrapeData("https://www.goodreads.com/genres/mystery", NewBookReleases.class);
             ObjectMapper objectMapper = new ObjectMapper();
-            String json = objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(ote);
+            String json = objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(newBookReleases.getNewReleases());
             System.out.println(json);
         } catch (Exception e) {
             System.out.println(e.getMessage());
