@@ -23,7 +23,7 @@ public class MobilePhone {
         processed.setModelName(
                 modelName == null ? null : modelName.replace("Mobilní telefon ", "")
         );
-        processed.setPriceCzk(priceCzk);
+        processed.setPriceCzk(priceCzk == null ? null : priceCzk.replace("&nbsp;", ""));
         processed.setRating(rating);
 
         if (description != null) {

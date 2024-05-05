@@ -1,7 +1,5 @@
 package fit.vutbr.HtmlScrapperDemo.fitVutNewsDemo;
 
-import com.fasterxml.jackson.databind.annotation.JsonSerialize;
-import com.fasterxml.jackson.databind.ser.std.ToStringSerializer;
 import fit.vutbr.HtmlScrapper.annotations.CssSelect;
 import fit.vutbr.HtmlScrapper.annotations.DateTimePattern;
 import fit.vutbr.HtmlScrapper.scrapper.ScrapperUtils;
